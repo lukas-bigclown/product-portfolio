@@ -7,7 +7,6 @@ collections:
   - name: 'product'
     label: 'Products'
     folder: 'content/product'
-    extension: "en.md"
     create: true
     slug: '{{code}}'
     editor:
