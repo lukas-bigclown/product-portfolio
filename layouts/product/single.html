@@ -2,24 +2,92 @@
 
 <div class="row">
 <div class = "container pt-90">
-    <h1 class = "display-1">{{ .Title }}</h1>
+    <h1 class = "">{{ .Title }}</h1>
 
     <div class="accordion" id="accordionExample">
         <div class="card">
+            <div class="card-header" id="headingOne">
+              <h6 class="mb-0">
+                Code
+              </h6>
+            </div>
+        
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <div class="card-body">
+                {{ .Params.code | markdownify }}
+              </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header" id="headingOne">
+              <h6 class="mb-0">
+                Status
+              </h6>
+            </div>
+        
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <div class="card-body">
+                <span class="badge badge-pill badge-success">{{ .Params.status }}</span>
+              </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header" id="headingOne">
+              <h6 class="mb-0">
+                Developers
+              </h6>
+            </div>
+        
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <div class="card-body">
+                <a href = "{{ .Params.developers }}" target="_blank">{{ .Params.developers }}</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header" id="headingOne">
+              <h6 class="mb-0">
+                Photos
+              </h6>
+            </div>
+        
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <div class="card-body">
+                <a href = "{{ .Params.photos }}" target = "_blank">{{ .Params.photos }}</a>
+              </div>
+            </div>
+          </div>
+
+        <div class="card">
           <div class="card-header" id="headingOne">
-            <h2 class="mb-0">
-              <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                Short description
-              </button>
-            </h2>
+            <h6 class="mb-0">
+              Short description
+            </h6>
           </div>
       
           <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
             <div class="card-body">
-              {{ .Params.short_description }}
+              {{ .Params.short_description | markdownify }}
             </div>
           </div>
         </div>
+
+        <div class="card">
+            <div class="card-header" id="headingOne">
+              <h6 class="mb-0">Description</h6>
+            </div>
+        
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <div class="card-body">
+                {{ .Params.description | markdownify }}
+              </div>
+            </div>
+          </div>
+
+
       </div>
 
 </div>
