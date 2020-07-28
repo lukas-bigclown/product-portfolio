@@ -8,6 +8,7 @@ collections:
     label: 'Products'
     folder: 'content/product'
     create: true
+    extension: html
     slug: '{{slug}}'
     editor:
       preview: false
