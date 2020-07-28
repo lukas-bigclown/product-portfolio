@@ -6,7 +6,7 @@ public_folder: /img
 collections:
   - name: 'product'
     label: 'Products'
-    folder: 'content/proudct'
+    folder: 'content/product'
     create: true
     slug: '{{slug}}'
     editor:
