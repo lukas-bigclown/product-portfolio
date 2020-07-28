@@ -4,8 +4,8 @@ backend:
 media_folder: static/img
 public_folder: /img
 collections:
-  - name: 'product-en'
-    label: 'Products EN'
+  - name: 'product'
+    label: 'Products'
     folder: 'content/product'
     extension: "en.md"
     create: true
@@ -20,7 +20,7 @@ collections:
       - { label: 'Photos', name: 'photos', widget: 'string' }
       - { label: 'Short Description', name: 'short_description', widget: 'markdown' }
       - { label: 'Description', name: 'description', widget: 'markdown' }
-      - { label: 'Notes', name: 'body', widget: 'markdown' }
+      - { label: 'Notes', name: 'content', widget: 'markdown' }
 
 
 
