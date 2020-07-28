@@ -21,23 +21,6 @@ collections:
       - { label: 'Short Description', name: 'short_description', widget: 'markdown' }
       - { label: 'Description', name: 'description', widget: 'markdown' }
       - { label: 'Notes', name: 'body', widget: 'markdown' }
-  - name: 'product-cs'
-    label: 'Products CZ'
-    folder: 'content/product'
-    extension: "cs.md"
-    create: true
-    slug: '{{code}}'
-    editor:
-      preview: false
-    fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Code', name: 'code', widget: 'string' }
-      - { label: "Status", name: "status", widget: "select", options: [{label: "new", value: "primary"},{label: "registered", value: "info"},{label: "accepted", value: "warning"},{label: "published", value: "success"},{label: "canceled", value: "danger"}]}
-      - { label: 'Developers', name: 'developers', widget: 'string' }
-      - { label: 'Photos', name: 'photos', widget: 'string' }
-      - { label: 'Short Description', name: 'short_description', widget: 'markdown' }
-      - { label: 'Description', name: 'description', widget: 'markdown' }
-      - { label: 'Notes', name: 'body', widget: 'markdown' }
 
 
 
