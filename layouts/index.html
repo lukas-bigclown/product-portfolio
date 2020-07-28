@@ -1,0 +1,15 @@
+{{ define "main" }}
+
+<div class="row"></div>
+<div class = "container pt-90">
+    <div class = "col-12"></div>
+    <h1 class = "display-1">Product portfolio</h1>
+
+    {{ range .Pages }}
+        {{ .Render "grid" }}
+    {{ end }}
+
+</div>
+</div>
+</div>
+{{ end }}

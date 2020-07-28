@@ -1,0 +1,12 @@
+baseURL = "http://example.org/"
+homeURL = "/"
+languageCode = "en-us"
+title = "My New Hugo Site"
+
+[languages]
+    [languages.en]
+        LanguageName = "English"
+        weight = 1
+    [languages.cs]
+        LanguageName = "Česky"
+        weight = 2
