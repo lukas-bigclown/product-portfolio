@@ -5,9 +5,23 @@
    
     <h1 class = "display-1">Product portfolio</h1>
     <div class = "row">
-    {{ range .Pages }}
+        <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Status</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+                {{ range .Pages }}
         {{ .Render "grid" }}
     {{ end }}
+              
+            </tbody>
+          </table>
+    
 </div>
 </div>
 </div>

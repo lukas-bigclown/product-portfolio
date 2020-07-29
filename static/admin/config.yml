@@ -16,7 +16,7 @@ collections:
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Code', name: 'code', widget: 'string' }
-      - { label: "Status", name: "status", widget: "select", options: [{label: "new", value: "primary"},{label: "registered", value: "info"},{label: "accepted", value: "warning"},{label: "published", value: "success"},{label: "canceled", value: "danger"}]}
+      - { label: "Status", name: "status", widget: "select", options: ["new", "registered", "accepted", "published", "canceled"]}
       - { label: 'Developers', name: 'developers', widget: 'string' }
       - { label: 'Photos', name: 'photos', widget: 'string' }
       - { label: 'Short Description', name: 'short_description', widget: 'markdown' }
@@ -34,7 +34,7 @@ collections:
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Code', name: 'code', widget: 'string' }
-      - { label: "Status", name: "status", widget: "select", options: [{label: "new", value: "primary"},{label: "registered", value: "info"},{label: "accepted", value: "warning"},{label: "published", value: "success"},{label: "canceled", value: "danger"}]}
+      - { label: "Status", name: "status", widget: "select", options: ["new", "registered", "accepted", "published", "canceled"]}
       - { label: 'Developers', name: 'developers', widget: 'string' }
       - { label: 'Photos', name: 'photos', widget: 'string' }
       - { label: 'Short Description', name: 'short_description', widget: 'markdown' }

@@ -16,6 +16,22 @@
 
 {{ $currentLang := .Site.Language.Lang }}
 
+<div class = "container">
+  <ul class = "d-inline-block text-center text-lg-left mb-30 mt-0 mt-lg-0 pl-lg-20 pr-lg-20 list-unstyled py-0 my-0 font-14 font-md-12 font-weight-medium font-font2 text-uppercase justify-content-center justify-content-md-end">
+    <li class = "d-inline-block"><span class="d-block pb-10 pb-lg-0 pr-lg-10 font-red active" href="{{ .Permalink }}">{{ .Site.Language.LanguageName }}</span></li>
+    {{ if .IsTranslated }}
+      {{ range .Translations }}
+        <li class = "d-inline-block"><a class="font-gray d-block pb-10 pb-lg-0 pr-lg-10" href="{{ .Permalink }}">{{ .Language.LanguageName }}</a></li>
+      {{ end }}
+    {{ else }}
+      {{ range .Site.Languages }}
+        {{ if ne .Lang $.Page.Lang }}
+        <li class = "d-inline-block"><a class="font-gray d-block pb-10 pb-lg-0 pr-lg-10" href="/{{ .Lang }}">{{ .Params.LanguageName }}</a></li>
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  </ul>
+</div>
 {{ block "main" . }}
     {{ .Content }}
 {{ end }}

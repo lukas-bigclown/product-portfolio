@@ -1,8 +1,6 @@
-<div class="card col-3" style = "padding-left:0; padding-right: 0; margin-right: 5px; margin-bottom: 5px;">
-    <img src="https://via.placeholder.com/700x500" class="card-img-top img-fluid" alt="...">
-    <div class="card-body">
-      <h6 class="card-subtitle mb-2 text-muted">{{ .Params.code }} <span class="badge badge-pill badge-success">{{ .Params.status }}</span></h6>
-      <h5 class="card-title">{{ .Title }} </h5>
-      <a href="{{ .Permalink }}" class="btn btn-primary">Detail</a>
-    </div>
-  </div>
+  <tr>
+    <th scope="row">{{ .Params.code }}</th>
+    <td>{{ .Title }}</td>
+    <td>{{ .Params.status }}</td>
+    <td><a href="{{ .Permalink }}" class="btn btn-primary">Detail</a></td>
+  </tr>
