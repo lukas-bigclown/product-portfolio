@@ -1,6 +1,22 @@
   <tr>
     <th scope="row">{{ .Params.code }}</th>
     <td>{{ .Title }}</td>
-    <td>{{ .Params.status }}</td>
+    <td>
+      {{ $status := "unknown" }}
+
+                {{ if eq .Params.status "published"}}
+                  <span class="badge badge-pill badge-success">{{ .Params.status }}</span>
+                {{ else if eq .Params.status "new" }}
+                  <span class="badge badge-pill badge-primary">{{ .Params.status }}</span>
+                {{ else if eq .Params.status "registered" }}
+                  <span class="badge badge-pill badge-info">{{ .Params.status }}</span>
+                {{ else if eq .Params.status "accepted" }}
+                  <span class="badge badge-pill badge-warning">{{ .Params.status }}</span>
+                {{ else if eq .Params.status "canceled" }}
+                  <span class="badge badge-pill badge-danger">{{ .Params.status }}</span>
+                {{ else }}
+                  <span class="badge badge-pill badge-secondary">Unknown</span>
+                {{ end }}
+    </td>
     <td><a href="{{ .Permalink }}" class="btn btn-primary">Detail</a></td>
   </tr>
