@@ -9,6 +9,8 @@ collections:
     folder: 'content/product'
     create: true
     slug: '{{code}}'
+    extension: 'en.md'
+    format: 'frontmatter'
     editor:
       preview: false
     fields:
@@ -25,6 +27,8 @@ collections:
     folder: 'content/product'
     create: true
     slug: '{{code}}'
+    extension: 'cs.md'
+    format: 'frontmatter'
     editor:
       preview: false
     fields:
